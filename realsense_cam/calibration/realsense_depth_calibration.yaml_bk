@@ -4,12 +4,12 @@ camera_name: realsense_depth_camera
 camera_matrix:
   rows: 3
   cols: 3
-  data: [469.443226, 0, 300.892984, 0, 465.9299, 243.819001, 0, 0, 1]
+  data: [472.677811, 0, 321.253302, 0, 474.45026, 233.193881, 0, 0, 1]
 distortion_model: plumb_bob
 distortion_coefficients:
   rows: 1
   cols: 5
-  data: [-0.14053, -0.005094, -0.00215, -0.003627, 0]
+  data: [-0.149017, 0.005122, 0.002906, 0.000462, 0]
 rectification_matrix:
   rows: 3
   cols: 3
@@ -17,4 +17,4 @@ rectification_matrix:
 projection_matrix:
   rows: 3
   cols: 4
-  data: [430.258148, 0, 293.016927, 0, 0, 445.649292, 242.721593, 0, 0, 0, 1, 0]
+  data: [434.666718, 0, 321.428959, 0, 0, 454.095825, 233.332878, 0, 0, 0, 1, 0]

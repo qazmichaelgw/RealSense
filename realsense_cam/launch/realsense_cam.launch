@@ -6,8 +6,8 @@
   <arg name="output" default="screen"/>
   <arg name="base_link" default="world"/>
   <arg name="link_prefix" default="realsense"/>
-  <arg name="rgb_device" default="/dev/video1"/>
-  <arg name="depth_device" default="/dev/video2"/>
+  <arg name="rgb_device" default="/dev/video0"/>
+  <arg name="depth_device" default="/dev/video1"/>
 
   <!-- Start Rviz -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find realsense_cam)/launch/realsense_cam.rviz"/>
@@ -23,6 +23,8 @@
   <!-- RGB publisher -->
   <node pkg="usb_cam" name="realsense_rgb_cam" type="usb_cam_node" output="$(arg output)">
     <param name="video_device" value="$(arg rgb_device)"/>
+    <param name="image_width" value="1920"/>
+    <param name="image_height" value="1080"/>
     <param name="camera_name" value="realsense_rgb_camera"/>
     <param name="camera_frame_id" value="$(arg link_prefix)_rgb_optical_frame"/>
     <param name="pixel_format" value="yuyv"/>
